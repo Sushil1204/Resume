@@ -1,12 +1,14 @@
-import React from "react"
+import React from "react";
+import About from "./components/About";
+import Header from "./components/Header";
 
 function App() {
-
   return (
-    <h1 className="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-  )
+    <>
+      <Header />
+      <About/>
+    </>
+  );
 }
 
-export default App
+export default App;
