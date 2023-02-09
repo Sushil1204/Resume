@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { BiLinkExternal } from "react-icons/bi";
-import project from "../utils/project";
 
 const Projects = ({ portfolio }) => {
   const [data, setData] = useState([]);
@@ -10,7 +9,7 @@ const Projects = ({ portfolio }) => {
     console.log(data);
   }, [portfolio]);
   return (
-    <div className="bg-sky-100">
+    <div>
       <section className="text-gray-600 body-font py-5">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-left w-full mb-20">
