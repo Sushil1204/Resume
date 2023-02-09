@@ -64,9 +64,9 @@ const Header = () => {
           >
             <div className="order-1 flex-1 justify-end items-end space-y-5 md:flex md:space-x-6 md:space-y-0">
               <li className="order-2 pb-5 md:pb-0 space-x-2">
-                <AiOutlineTwitter className="text-4xl text-sky-600 text-center focus:shadow-none block md:inline cursor-pointer" />
-                <AiFillGithub className="text-4xl text-sky-600 text-center focus:shadow-none block md:inline cursor-pointer" />
-                <AiFillLinkedin className="text-4xl text-sky-600 text-center focus:shadow-none block md:inline cursor-pointer" />
+                <AiOutlineTwitter className="text-4xl text-indigo-600 text-center focus:shadow-none block md:inline cursor-pointer" />
+                <AiFillGithub className="text-4xl text-indigo-600 text-center focus:shadow-none block md:inline cursor-pointer" />
+                <AiFillLinkedin className="text-4xl text-indigo-600 text-center focus:shadow-none block md:inline cursor-pointer" />
               </li>
             </div>
           </ul>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BiLinkExternal } from "react-icons/bi";
+import project from "../utils/project";
 
 const Projects = ({ portfolio }) => {
   const [data, setData] = useState([]);
@@ -16,12 +17,12 @@ const Projects = ({ portfolio }) => {
             <h1 className="sm:text-5xl text-4xl font-bold title-font mb-4 text-gray-900">
               My Projects
             </h1>
-            <div class="h-1 w-80 bg-indigo-500 rounded"></div>
+            <div className="h-1 w-80 bg-indigo-500 rounded"></div>
           </div>
           <div className="flex flex-wrap -m-4">
             {data.map((item, index) => {
               return (
-                <div className="lg:w-1/3 sm:w-1/2 p-4" id={index}>
+                <div className="lg:w-1/3 sm:w-1/2 p-4" key={index}>
                   <div className="flex relative">
                     <img
                       alt="gallery"
