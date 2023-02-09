@@ -22,13 +22,13 @@ function App() {
     getProjects();
     },[]);
   return (
-    <>
+    <div className="bg-neutral-200">
       <Header />
       <Skills />
       <Projects portfolio={portfolio}/>
       <Blogs/>
       <Contact/>
-    </>
+    </div>
   );
 }
 
