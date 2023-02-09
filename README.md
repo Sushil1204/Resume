@@ -1,5 +1,5 @@
 # Frontend Developer Portfolio
-This repository showcases the portfolio of a frontend developer. It includes examples of the developer's work and skills, along with a brief biography and contact information.
+This repository showcases my portfolio. It includes examples of the my work and skills, along with a brief biography and contact information.
 
 
 ## 🛠 Skills
