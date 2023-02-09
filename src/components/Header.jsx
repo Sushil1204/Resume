@@ -7,7 +7,7 @@ const Header = () => {
   const [state, setState] = useState(false);
 
   return (
-    <div className="bg-sky-100">
+    <div>
       <header className="py-5">
         <nav className="items-center pt-5 px-4 mx-auto max-w-screen-xl sm:px-8 md:flex md:space-x-6">
           <div className="flex justify-between">
@@ -64,9 +64,15 @@ const Header = () => {
           >
             <div className="order-1 flex-1 justify-end items-end space-y-5 md:flex md:space-x-6 md:space-y-0">
               <li className="order-2 pb-5 md:pb-0 space-x-2">
-                <AiOutlineTwitter className="text-4xl text-indigo-600 text-center focus:shadow-none block md:inline cursor-pointer" />
-                <AiFillGithub className="text-4xl text-indigo-600 text-center focus:shadow-none block md:inline cursor-pointer" />
-                <AiFillLinkedin className="text-4xl text-indigo-600 text-center focus:shadow-none block md:inline cursor-pointer" />
+                <a href="https://www.linkedin.com/in/sushil-pundkar-a9ba8b185/">
+                  <AiFillLinkedin className="text-4xl text-indigo-600 text-center focus:shadow-none block md:inline cursor-pointer" />
+                </a>
+                <a href="https://twitter.com/Pundkar12">
+                  <AiOutlineTwitter className="text-4xl text-indigo-600 text-center focus:shadow-none block md:inline cursor-pointer" />
+                </a>
+                <a href="https://github.com/Sushil1204">
+                  <AiFillGithub className="text-4xl text-indigo-600 text-center focus:shadow-none block md:inline cursor-pointer" />
+                </a>
               </li>
             </div>
           </ul>
