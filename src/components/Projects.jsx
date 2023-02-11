@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { BiLinkExternal } from "react-icons/bi";
+import projects from "../utils/projects";
 
-const Projects = ({ portfolio }) => {
-  const [data, setData] = useState([]);
+const Projects = () => {
 
-  useEffect(() => {
-    setData(portfolio);
-    console.log(data);
-  }, [portfolio]);
+  const truncate = (input) =>
+    input?.length > 150 ? `${input.substring(0, 100)}...` : input;
+  
   return (
     <div>
       <section className="text-gray-600 body-font py-5">
@@ -19,7 +18,7 @@ const Projects = ({ portfolio }) => {
             <div className="h-1 w-80 bg-indigo-500 rounded"></div>
           </div>
           <div className="flex flex-wrap -m-4">
-            {data.map((item, index) => {
+            {projects.map((item, index) => {
               return (
                 <div className="lg:w-1/3 sm:w-1/2 p-4" key={index}>
                   <div className="flex relative">
@@ -36,8 +35,7 @@ const Projects = ({ portfolio }) => {
                         {item.title}
                       </h1>
                       <p className="leading-relaxed">
-                        Photo booth fam kinfolk cold-pressed sriracha leggings
-                        jianbing microdosing tousled waistcoat.
+                        {truncate(item.desc)}
                       </p>
                       <a
                         href={item.link}

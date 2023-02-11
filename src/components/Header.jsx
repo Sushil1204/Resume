@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import profile from "../assets/profile.png";
+import SushilPundkarResume from '../assets/SushilPundkarResume.pdf';
 import { AiFillGithub, AiFillLinkedin, AiOutlineTwitter } from "react-icons/ai";
-
 const Header = () => {
   const [state, setState] = useState(false);
 
@@ -95,9 +95,9 @@ const Header = () => {
                 technologies. Let's connect!
               </p>
               <div className="flex justify-center">
-                <button className="inline-flex text-white bg-indigo-600 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                <a href={SushilPundkarResume} className="inline-flex text-white bg-indigo-600 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg" download>
                   Download my CV
-                </button>
+                </a>
               </div>
             </div>
             <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
