@@ -2,14 +2,14 @@ import React, { useContext, useState } from "react";
 import logo from "../assets/logo.png";
 import logoWhite from "../assets/logoWhite.png";
 import profile from "../assets/profile.png";
-import SushilPundkarResume from '../assets/SushilPundkarResume.pdf';
+import SushilPundkarResume from "../assets/SushilPundkarResume.pdf";
 import { AiFillGithub, AiFillLinkedin, AiOutlineTwitter } from "react-icons/ai";
 // import ThemeToggle from "./ThemeToggle";
 import { MdOutlineDarkMode, MdOutlineWbSunny } from "react-icons/md";
-import { ThemeContext } from "../Context/ThemeContext";
+import { ThemeContext } from "../context/ThemeContext";
 const Header = () => {
   const [state, setState] = useState(false);
-  const {theme, setTheme} = useContext(ThemeContext);
+  const { theme, setTheme } = useContext(ThemeContext);
 
   return (
     <div>
@@ -17,22 +17,22 @@ const Header = () => {
         <nav className="items-center pt-5 px-4 mx-auto max-w-screen-xl sm:px-8 md:flex md:space-x-6">
           <div className="flex justify-between">
             <a href="/">
-              {
-                theme === "dark" ?
-                (<img
-                src={logoWhite}
-                width={120}
-                height={10}
-                className="w-24 h-14"
-                alt="Float UI logo"
-              />):(
+              {theme === "dark" ? (
                 <img
-                src={logo}
-                width={120}
-                height={10}
-                className="w-24 h-14"
-                alt="Float UI logo"
-              />
+                  src={logoWhite}
+                  width={120}
+                  height={10}
+                  className="w-24 h-14"
+                  alt="Float UI logo"
+                />
+              ) : (
+                <img
+                  src={logo}
+                  width={120}
+                  height={10}
+                  className="w-24 h-14"
+                  alt="Float UI logo"
+                />
               )}
             </a>
             <button
@@ -88,17 +88,25 @@ const Header = () => {
                 <a href="https://github.com/Sushil1204">
                   <AiFillGithub className="text-4xl text-indigo-600 dark:text-gray-100  text-center focus:shadow-none block md:inline cursor-pointer" />
                 </a>
-                {theme === 'dark' ? (
-              <MdOutlineWbSunny
-                  onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                  className="text-4xl text-indigo-600 dark:text-white text-center focus:shadow-none block md:inline cursor-pointer"
-              />
-          ) : (
+                {theme === "dark" ? (
+                  <a>
+                  <MdOutlineWbSunny
+                    onClick={() =>
+                      setTheme(theme === "dark" ? "light" : "dark")
+                    }
+                    className="text-4xl text-indigo-600 dark:text-white text-center focus:shadow-none block md:inline cursor-pointer"
+                    />
+                    </a>
+                ) : (
+                  <a>
                   <MdOutlineDarkMode
-                      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                      className="text-4xl text-indigo-600 text-center focus:shadow-none block md:inline cursor-pointer"
-                  />
-              )}
+                    onClick={() =>
+                      setTheme(theme === "dark" ? "light" : "dark")
+                    }
+                    className="text-4xl text-indigo-600 text-center focus:shadow-none block md:inline cursor-pointer"
+                      />
+                    </a>
+                )}
               </li>
             </div>
           </ul>
@@ -121,7 +129,11 @@ const Header = () => {
                 technologies. Let's connect!
               </p>
               <div className="flex justify-center">
-                <a href={SushilPundkarResume} className="inline-flex text-white bg-indigo-600 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg" download>
+                <a
+                  href={SushilPundkarResume}
+                  className="inline-flex text-white bg-indigo-600 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+                  download
+                >
                   Download my CV
                 </a>
               </div>
